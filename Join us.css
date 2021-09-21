@@ -1,0 +1,162 @@
+/* -------CSS reset------- */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* -------CSS body------- */
+
+body{
+    background-image: url('https://cdn.pixabay.com/photo/2017/08/07/14/02/man-2604149_960_720.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    color: white;
+}
+
+.header{
+    height: 86px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    margin-top: 1rem;
+    text-align: center;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+#icon{
+    display: none;
+    margin-right: 36px;
+}
+
+.navbar{
+    margin-right: 2.5rem;
+}
+
+.navbar ul{
+    display: flex;
+}
+
+.navbar li{
+    list-style: none;
+    padding: 1px 17px;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.navbar li a{
+    text-decoration: none;
+    padding: 3px 12px;
+    border-radius: 1.1rem;
+    color: white;
+    transition: all 0.5s;
+}
+
+.navbar li a:hover{
+    background-color: #30997b;
+}
+
+#form h1{
+    font-size: 2.3rem;
+    text-align: center;
+    margin-top: 0.6rem;
+    margin-bottom: 1.6rem;
+    color: #30997b;
+}
+
+#form form{
+    display: grid;
+    grid-template-areas: 
+    'box-1 box-2'
+    'box-1 box-2'
+    'box-3 box-3'
+    ;
+    justify-content: center;
+    align-items: center;
+}
+
+#form form input{
+    margin: 1.1rem;
+    padding: 8px 1.2rem;
+    border: 2px solid #30997b;
+    border-radius: 9px;
+    text-align: center;
+}
+
+#form form input:focus{
+    outline: none;
+} 
+
+label{
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.box-1{
+    grid-area: box-1;
+}
+
+.box-2{
+    grid-area: box-2;
+}
+    
+.box-3{
+    grid-area: box-3;
+    text-align: center;
+}
+
+.box-3 textarea{
+    margin-top: 16px;
+    resize: vertical;
+    border-radius: 9px;
+    padding: 8px 1.2rem;
+}
+
+.box-3 textarea:focus{
+    outline: none;
+}
+
+.form-btn{
+    margin: auto;
+    margin-top: 0.7rem;
+    display: block;
+    padding: 4px 17px;
+    font-size: 23px;
+    font-weight: bold;
+    color: white;
+    border: 1px solid white;
+    border-radius: 1.1rem;
+    background-color: #30997b;
+}
+
+.form-btn:hover{
+    opacity: 0.9;
+}
+
+/* -------Media Quaries------- */
+
+@media only screen and (max-width: 800px){
+    .navbar li{ font-size: 1.4rem;}
+}
+
+@media only screen and (max-width: 621px){
+    .navbar{ display: none;}
+    #icon{ display: block;}
+    #logo-h2{ font-size: 1.1rem;}
+}
+
+@media only screen and (max-width: 486px){
+    #form form{ display: grid; grid-template-areas: 'box-1' 'box-2' 'box-3';}
+    #form h1{ font-size: 1.8rem;}
+    #form form input{ margin: 1rem; width: 100%;}
+}
